@@ -29,6 +29,10 @@ public class Hopital {
     }
 
     public boolean assignerPatientChambre(Patient p) {
+        if (p == null) {
+            System.out.println("Patient null, impossible d'assigner une chambre.");
+            return false;
+        }
         for (int i = 0; i < tabChambres.length; i++) {
             Chambre chambre = tabChambres[i];
             if (chambre != null && chambre.nb_lits_disponibles>0) {
