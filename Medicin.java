@@ -28,8 +28,12 @@ public abstract class Medicin implements Operer{
     }
 
     public void retirerPatient(Patient p){
+        if (p == null) {
+            System.out.println("Patient null, impossible de retirer.");
+            return;
+        }
         for(int i=0;i<tabPatients.length;i++){
-            if(tabPatients[i]==p){
+            if(tabPatients[i] != null && tabPatients[i]==p){
                 tabPatients[i]=null;
                 if(i!=tabPatients.length-1){
                     for(int r=i; r<tabPatients.length-1;r++){
@@ -38,8 +42,10 @@ public abstract class Medicin implements Operer{
                     tabPatients[tabPatients.length-1]=null;
                 }
                 num_actu--;
+                return;
             }
         }
+        System.out.println("Patient non trouvé dans la liste.");
     }
 
     public String toString(){
