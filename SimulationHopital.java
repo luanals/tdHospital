@@ -1,4 +1,4 @@
-public class TestClasses {
+public class SimulationHopital {
     
     public static void main(String[] args){
 
