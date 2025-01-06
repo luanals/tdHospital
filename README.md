@@ -21,13 +21,16 @@ Below is the diagram representing the system's main structure and class relation
 ## Installation
 1. Clone this repository:
 ```
-git clone https://github.com/luanals/tdHopital.git
+git clone https://github.com/luanals/tdHopital
 ```
 2. Open the project in your preferred IDE.
 3. Ensure the environment is configured for Java 8 or later.
 
 ## How to Run
 1. Compile all the classes in the project.
+```
+javac *.java
+```
 2. Run the main class `SimulationHopital`:
 ```
 java SimulationHopital
